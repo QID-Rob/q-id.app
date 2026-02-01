@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-ID Authentication</title>
+    <title>Q-ID Authentication Demo</title>
     <meta name="apple-itunes-app" content="app-clip-bundle-id=com.discoq-id.app.clip">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,8 +20,18 @@
             text-align: center;
         }
         .container { max-width: 400px; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .subtitle { font-size: 1.2rem; opacity: 0.8; margin-bottom: 2rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .demo-badge {
+            display: inline-block;
+            background: #4ecdc4;
+            color: #1a1a2e;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .subtitle { font-size: 1.1rem; opacity: 0.8; margin-bottom: 2rem; }
         .card {
             background: rgba(255,255,255,0.1);
             border-radius: 16px;
@@ -29,51 +39,68 @@
             margin-bottom: 1.5rem;
             backdrop-filter: blur(10px);
         }
-        .step { margin-bottom: 1rem; }
-        .step-number {
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            background: #4ecdc4;
-            border-radius: 50%;
-            line-height: 28px;
-            font-weight: bold;
-            margin-right: 10px;
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
         }
-        .app-store-badge {
-            display: inline-block;
+        .card p {
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        .instructions {
+            text-align: left;
             margin-top: 1rem;
         }
-        .app-store-badge img { height: 50px; }
-        .footer { margin-top: 2rem; opacity: 0.5; font-size: 0.9rem; }
+        .instructions li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+        .note {
+            background: rgba(78, 205, 196, 0.2);
+            border-left: 3px solid #4ecdc4;
+            padding: 12px 16px;
+            margin-top: 1rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .footer {
+            margin-top: 2rem;
+            opacity: 0.5;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Q-ID</h1>
+        <span class="demo-badge">DEMO</span>
         <p class="subtitle">Optical PUF Authentication</p>
 
         <div class="card">
-            <div class="step">
-                <span class="step-number">1</span>
-                Scan the Q-ID tag with your iPhone camera
-            </div>
-            <div class="step">
-                <span class="step-number">2</span>
-                The Q-ID App Clip will launch automatically
-            </div>
-            <div class="step">
-                <span class="step-number">3</span>
-                Hold steady while we capture and verify
+            <h2>App Clip Demo</h2>
+            <p>This page triggers the Q-ID App Clip for testing optical authentication without installing the full app.</p>
+
+            <div class="note">
+                On iPhone, you should see an App Clip card appear at the bottom of Safari. Tap "Open" to launch.
             </div>
         </div>
 
-        <p>Or download the full app:</p>
-        <a href="https://apps.apple.com/app/id6740092498" class="app-store-badge">
-            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
-        </a>
+        <div class="card">
+            <h2>How to Test</h2>
+            <ol class="instructions">
+                <li>Visit this page on an iPhone with iOS 17+</li>
+                <li>Tap the App Clip banner to launch</li>
+                <li>Point your camera at a Q-ID tag</li>
+                <li>Hold steady while we verify authenticity</li>
+            </ol>
+        </div>
 
-        <p class="footer">Disco Q-ID Demo</p>
+        <p class="footer">
+            Disco Q-ID Demo Environment<br>
+            For testing purposes only
+        </p>
     </div>
 </body>
 </html>
