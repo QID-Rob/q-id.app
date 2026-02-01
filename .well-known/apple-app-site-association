@@ -1,0 +1,14 @@
+{
+  "appclips": {
+    "apps": ["3W7SPRJCEL.com.discoq-id.app.clip"]
+  },
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "3W7SPRJCEL.com.discoq-id.app",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

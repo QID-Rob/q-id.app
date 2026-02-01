@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-ID Authentication</title>
+    <meta name="apple-itunes-app" content="app-clip-bundle-id=com.discoq-id.app.clip">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .container { max-width: 400px; }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .subtitle { font-size: 1.2rem; opacity: 0.8; margin-bottom: 2rem; }
+        .card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .step { margin-bottom: 1rem; }
+        .step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            line-height: 28px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .app-store-badge img { height: 50px; }
+        .footer { margin-top: 2rem; opacity: 0.5; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Q-ID</h1>
+        <p class="subtitle">Optical PUF Authentication</p>
+
+        <div class="card">
+            <div class="step">
+                <span class="step-number">1</span>
+                Scan the Q-ID tag with your iPhone camera
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                The Q-ID App Clip will launch automatically
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                Hold steady while we capture and verify
+            </div>
+        </div>
+
+        <p>Or download the full app:</p>
+        <a href="https://apps.apple.com/app/id6740092498" class="app-store-badge">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+        </a>
+
+        <p class="footer">Disco Q-ID Demo</p>
+    </div>
+</body>
+</html>
